@@ -90,7 +90,7 @@ void loop()
     noTone(buzzPin);
     delay(1800);
     Serial.println(ctime(&now));
-    client.publish("door", (opened).c_str());                         //message sent to cloud
+    client.publish("door", (opened).c_str());                         //message sent to cloud using "door" topic. The same topic is to be added in the the android app as well
     }
     else                                                              //if door is closed
     {
